@@ -1,0 +1,24 @@
+# Secrets / environment
+.env
+.env.*
+!.env.example
+
+# Data, models, logs (research artifacts — not committed)
+data/
+logs/
+logs2/
+week/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Databases / archives
+*.db
+*.zip
+
+# OS
+.DS_Store

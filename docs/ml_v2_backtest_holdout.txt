@@ -1,0 +1,15 @@
+ML V2 backtest (VM, 2026-04-26) — hold-out from 2026-03-01, SL=10 TP=15, N_FUTURE=120,
+spread defaults per bar_features V2, six pairs.
+
+Threshold sweep (--min-tpd 0.1):
+  th=0.450 n=257 WR=36.2% PF=0.78 pips=-340 tpd=4.77  (script “sweet spot” = max PF)
+  th=0.500 n=70  WR=35.7% PF=0.77 pips=-100 tpd=1.30
+  th=0.550 n=35  WR=25.7% PF=0.48 pips=-131 tpd=0.65
+  th=0.600 n=21  WR=23.8% PF=0.38 pips=-99  tpd=0.39
+
+Note: Mar–Apr 2026 test window still shows negative total pips at all thresholds;
+monitor live and consider raising threshold or another retrain if live matches this.
+
+Train metrics (see data/ml/train_report.json):
+  long:  val_auc ~0.70, test_auc ~0.65
+  short: val_auc ~0.71, test_auc ~0.65
